@@ -38,7 +38,7 @@ let package = Package(
       sources: ["GMSEmpty.m"],
       resources: [
         .copy("Resources/GoogleMapsResources/GoogleMaps.bundle"),
-        .process("../GoogleMapsPrivacy.bundle")
+        .process("PrivacyInfo.xcprivacy")
       ],
       publicHeadersPath: "Sources",
       linkerSettings: [
@@ -69,7 +69,7 @@ let package = Package(
       dependencies: ["GoogleMapsCore"],
       path: "Core",
       sources: ["GMSEmpty.m"],
-      resources: [.process("../GoogleMapsPrivacy.bundle")],
+      resources: [.process("PrivacyInfo.xcprivacy")],
       publicHeadersPath: "Sources"
     ),
     .binaryTarget(
@@ -81,7 +81,7 @@ let package = Package(
       dependencies: ["GoogleMapsBase"],
       path: "Base",
       sources: ["GMSEmpty.m"],
-      resources: [.process("../GoogleMapsPrivacy.bundle")],
+      resources: [.process("PrivacyInfo.xcprivacy")],
       publicHeadersPath: "Sources"
     ),
     .binaryTarget(
